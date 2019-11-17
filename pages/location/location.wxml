@@ -1,0 +1,22 @@
+<van-cell title="当前定位城市：" icon="location-o" is-link value="上海" bind:click="showPopup">
+  <!-- <van-icon slot="right-icon" name="search" class="custom-icon" /> -->
+</van-cell>
+
+
+
+<!-- <van-button type="default" bind:click="showPopup">
+  以开通业务的城市
+</van-button> -->
+
+
+
+<van-popup show="{{ show }}" position="bottom" bind:close="onClose">
+  <van-area 
+  area-list="{{ areaList }}" 
+  columns-num="{{ 2 }}" 
+  bind:confirm="selectAddress" 
+  bind:cancel="onClose" 
+  title="开通业务的城市" 
+  value="{{selAddress}}"
+  />
+</van-popup>
